@@ -9,49 +9,64 @@
 </head>
 
 <body>
-	<div class="form-box">
 
-		<div class="form-header">
-			<button onclick="switchLogin()" class="login-form-button">Login</button>
+	<div class="page">
 
-			<button onclick="switchSignup()" class="signup-form-button">Signup</button>
+		<div class="top">
+			<img src="img/jab.png">
 		</div>
 
-		<div class="form-body">
+		<div class="form-box">
 
-			<form id="login" autocomplete="on">
+			<div class="form-header">
+				<button onclick="switchLogin()" class="login-form-button">Login</button>
 
-				<div class="input-row">
-					<label for="username">Username:</label>
-					<input type="text" id="username" name="username" autocomplete="username">
-				</div>
+				<button onclick="switchSignup()" class="signup-form-button">Signup</button>
+			</div>
 
-				<div class="input-row">
-					<label for="password">Password:</label>
-					<input type="password" id="password" name="password" autocomplete="current-password">
-				</div>
+			<div class="form-body">
 
-			</form>
+				<form id="login" autocomplete="on">
 
-			<form id="signup" style="display: none;">
+					<div class="input-row">
+						<label for="username">Username:</label>
+						<input type="text" id="username" name="username" autocomplete="username">
+					</div>
 
-				<div class="input-row">
-					<label for="username">Username:</label>
-					<input type="text" id="username" name="username" autocomplete="username">
-				</div>
+					<div class="input-row">
+						<label for="password">Password:</label>
+						<input type="password" id="password" name="password" autocomplete="current-password">
+					</div>
 
-				<div class="input-row">
-					<label for="password">Password:</label>
-					<input type="password" id="password" name="password" autocomplete="current-password">
-				</div>
+				</form>
 
-				<div class="input-row">
-					<label for="confirm-password">Password:</label>
-					<input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+				<form id="signup" style="display: none;">
 
-				</div>
-			</form>
+					<div class="input-row">
+						<label for="username">Username:</label>
+						<input type="text" id="username" name="username" autocomplete="username">
+					</div>
 
+					<div class="input-row">
+						<label for="password">Password:</label>
+						<input type="password" id="password" name="password" autocomplete="current-password">
+					</div>
+
+					<div class="input-row">
+						<label for="confirm-password">Password:</label>
+						<input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+
+		<div class="bot">
+			<img src="img/amazon.png">
+			<img src="img/microsoft.png">
+			<img src="img/google.png">
 		</div>
 
 	</div>
