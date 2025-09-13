@@ -12,9 +12,9 @@
 	<div class="form-box">
 
 		<div class="form-header">
-			<button class="login-form-button">Login</button>
+			<button onclick="switchLogin()" class="login-form-button">Login</button>
 
-			<button class="signup-form-button">Signup</button>
+			<button onclick="switchSignup()" class="signup-form-button">Signup</button>
 		</div>
 
 		<div class="form-body">
@@ -35,11 +35,28 @@
 
 			<form id="signup" style="display: none;">
 
+				<div class="input-row">
+					<label for="username">Username:</label>
+					<input type="text" id="username" name="username" autocomplete="username">
+				</div>
+
+				<div class="input-row">
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" autocomplete="current-password">
+				</div>
+
+				<div class="input-row">
+					<label for="confirm-password">Password:</label>
+					<input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+
+				</div>
 			</form>
 
 		</div>
 
 	</div>
+
+	<script src="switch_form.js"></script>
 </body>
 
 </html>

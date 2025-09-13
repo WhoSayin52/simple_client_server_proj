@@ -78,5 +78,12 @@ button.signup-form-button:hover {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 32px;
+}
+
+#login {
+	gap: 16px;
+}
+
+#signup {
+	gap: 12px;
 }
