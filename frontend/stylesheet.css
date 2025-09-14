@@ -25,7 +25,7 @@ body {
 
 .form-box {
 	width: 400px;
-	height: 200px;
+	height: 250px;
 	padding: 0px;
 	background-color: white;
 
@@ -89,17 +89,26 @@ button.signup-form-button:hover {
 	width: 70px;
 }
 
-#login,
-#signup {
+#login-form,
+#signup-form {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-#login {
+#login-form {
 	gap: 16px;
 }
 
-#signup {
+#signup-form {
 	gap: 12px;
+}
+
+#login-button,
+#signup-button {
+	width: 70px;
+
+	margin-top: 10px;
+
+	align-self: center;
 }

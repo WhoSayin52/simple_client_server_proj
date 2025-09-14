@@ -21,42 +21,48 @@
 			<div class="form-header">
 				<button onclick="switchLogin()" class="login-form-button">Login</button>
 
-				<button onclick="switchSignup()" class="signup-form-button">Signup</button>
+				<button onclick="switchSignup()" class="signup-form-button">Sign-up</button>
 			</div>
 
 			<div class="form-body">
 
-				<form id="login" autocomplete="on">
+				<form id="login-form" autocomplete="on" action="/login" method="POST">
 
 					<div class="input-row">
 						<label for="username">Username:</label>
-						<input type="text" id="username" name="username" autocomplete="username">
+						<input type="text" id="username-login" name="username" autocomplete="username">
 					</div>
 
 					<div class="input-row">
 						<label for="password">Password:</label>
-						<input type="password" id="password" name="password" autocomplete="current-password">
+						<input type="password" id="password-login" name="password" autocomplete="current-password">
 					</div>
+
+					<button id="login-button">Login</button>
 
 				</form>
 
-				<form id="signup" style="display: none;">
+				<form id="signup-form" style="display: none;" action="/signup" method="POST">
 
 					<div class="input-row">
 						<label for="username">Username:</label>
-						<input type="text" id="username" name="username" autocomplete="username">
+						<input type="text" id="username-signup" name="username" autocomplete="username">
 					</div>
 
 					<div class="input-row">
 						<label for="password">Password:</label>
-						<input type="password" id="password" name="password" autocomplete="current-password">
+						<input type="password" id="password-signup" name="password" autocomplete="current-password">
 					</div>
 
 					<div class="input-row">
 						<label for="confirm-password">Password:</label>
-						<input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+						<input type="password" id="confirm-password-signup" name="confirm-password"
+							placeholder="Confirm Password">
 
 					</div>
+
+					<button id="signup-button">Sign-Up</button>
+
 				</form>
 
 			</div>
