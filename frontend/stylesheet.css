@@ -1,29 +1,26 @@
 body {
 	height: 100vh;
 
-	background-image: url('img/background.jpeg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-color: black;
+	display: flex;
+	flex-direction: column;
+}
 
-	height: 100vh;
+.top {
+	height: 225px;
 
 	display: flex;
 	justify-content: center;
-	align-items: center;
 }
 
-.page {
+.mid {
+	height: 100%;
+
+	margin-bottom: 200px;
+
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-
-	gap: 200px;
-}
-
-.bot {
-	display: flex;
 }
 
 .form-box {
