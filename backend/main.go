@@ -136,13 +136,13 @@ func initDB() (*pgxpool.Pool, error) {
 	ctx := context.Background()
 
 	log.Println("Connecting to postgres database...")
-	adminConn, err := pgx.Connect(ctx, "postgres://jab:jab@localhost:5432/postgres")
+	adminConn, err := pgx.Connect(ctx, "postgres://test_db:test_db@localhost:5432/postgres")
 	if err != nil {
 		return nil, fmt.Errorf("unable to connect database: %w", err)
 	}
 	defer adminConn.Close(ctx)
 
-	dbName := "jab_db"
+	dbName := "test_db"
 
 	var exists bool
 	err = adminConn.QueryRow(ctx, "SELECT EXISTS(SELECT 1 FROM pg_database WHERE datname=$1)", dbName).Scan(&exists)
@@ -159,7 +159,7 @@ func initDB() (*pgxpool.Pool, error) {
 		}
 	}
 
-	dbPool, err := pgxpool.New(ctx, fmt.Sprintf("postgres://jab:jab@localhost:5432/%s", dbName))
+	dbPool, err := pgxpool.New(ctx, fmt.Sprintf("postgres://test_db:test_db@localhost:5432/%s", dbName))
 	if err != nil {
 		return nil, fmt.Errorf("failed to connect to database: %w", err)
 	}
@@ -174,7 +174,7 @@ func initDB() (*pgxpool.Pool, error) {
 		return nil, fmt.Errorf("failed to create users table: %w", err)
 	}
 
-	log.Printf("Database running at postgres://jab:***@localhost:5432/%s\n", dbName)
+	log.Printf("Database running at postgres://test_db:***@localhost:5432/%s\n", dbName)
 
 	return dbPool, nil
 }
